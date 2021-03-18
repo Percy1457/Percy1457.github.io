@@ -56,11 +56,11 @@ return string.toUpperCase();
  */
 function toDashCase(string) {
     // YOUR CODE BELOW HERE //
-var red = string.split(".");
+var red = string.split(" ");
 
-var green = red.join('.');
+var green = red.join('-').toLowerCase();
 
-return green.toLowerCase();
+return green;
 
 
     // YOUR CODE ABOVE HERE //
@@ -81,6 +81,7 @@ return green.toLowerCase();
 function beginsWith(string, char) {
     // YOUR CODE BELOW HERE //
 
+string.toUpperCase().startsWith(string.toUpperCase())
     
 
     // YOUR CODE ABOVE HERE //
@@ -113,7 +114,7 @@ function endsWith(string, char) {
  */
 function concat(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+return stringOne + stringTwo;
 
 
     // YOUR CODE ABOVE HERE //
@@ -132,7 +133,7 @@ function concat(stringOne, stringTwo) {
 function join(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
     var args = Array.from(arguments);
-
+return args.join("")
 
     // YOUR CODE ABOVE HERE //
 }
@@ -148,7 +149,11 @@ function join(stringOne, stringTwo) {
  */
 function longest(stringOne, stringTwo) {
     // YOUR CODE BELOW HERE //
-
+if(stringOne.length-1 > stringTwo.length-1){
+    return stringOne;
+} else if(stringOne.length-1 < stringTwo.length-1){
+    return stringTwo
+}
 
 
     // YOUR CODE ABOVE HERE //
